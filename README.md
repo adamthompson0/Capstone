@@ -66,13 +66,13 @@ User:
 Date: 
   - DateTimeZoneField
 
-- Location
+Location
 
-- Weather Data
+Weather Data
 
-- Weather Provider
+Weather Provider
 
-- Weather Update
+Weather Update
 
 
 
