@@ -15,7 +15,7 @@ def signup_view(request):
         if form.is_valid():
             user = form.save()
             auth.login(request, user)
-            return redirect('home')
+            return redirect('index')
         else:
             context = {
                 'form': form
@@ -27,7 +27,7 @@ def login_view(request):
         form = AuthenticationForm(request, request.POST)
         if form.is_valid():
             auth.login(request, form.get_user())
-            return redirect('home')
+            return redirect('index')
     else:
         form = AuthenticationForm()
     
