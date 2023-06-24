@@ -1,2 +1,17 @@
 {% load static %}
+<link rel="stylesheet" href="{% static 'weather/navbar.css'%}">
+<nav>
+    <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/7913380/weather-icon-md.png" alt="Weather logo">
+    <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        {% if request.user.is_authenticated %}
+        <li><a href="{% url 'logout'%}">Logout</a></li>
+        <li><a href="#">Profile</a></li>
+
+        {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'signup'%}">Sign Up</a></li>
+        {% endif %}
+    </ul>
+</nav>
 
