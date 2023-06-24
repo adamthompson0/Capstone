@@ -1,25 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Wizard</title>
-</head>
-<body>
-    <h1>Home</h1>
-    <form>
-        <label for="location-input">Enter a location:</label>
-        <input type="text" id="location-input" name="location" required>
-        <button type="submit">Get Weather</button>
-        {{weather.location}}
+{% extends 'weather/base.html' %}
 
-    </form>
-    <p>Time zone: {{weather.time_zone}}</p>
-    <p>Temperature: {{weather.temperature}}</p>
-    <p>Time: {{weather.date}}</p>
-    <p>Description: {{weather.description}}</p>
-    <p>{{weather.icon}}</p>
-    <p>Longitude: {{weather.longitude}}</p>
-    <p>Latitude: {{weather.latitude}}</p>
-</body>
-</html>
+{% block title %}Weather Wizard{% endblock title%}
+
+{% block content %}
+<h1>Home</h1>
+<form>
+    <label for="location-input">Enter a location:</label>
+    <input type="text" id="location-input" name="location" required>
+    <button type="submit">Get Weather</button>
+    {{weather.location}}
+
+</form>
+<p>Time zone: {{weather.time_zone}}</p>
+<p>Temperature: {{weather.temperature}}</p>
+<p>Time: {{weather.date}}</p>
+<p>Description: {{weather.description}}</p>
+<p>{{weather.icon}}</p>
+<p>Longitude: {{weather.longitude}}</p>
+<p>Latitude: {{weather.latitude}}</p>
+
+{% endblock content %}
