@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-</head>
-<body>
-    <h1>Sign Up</h1>
+{% extends 'weather/base.html' %}
 
-    <form action="" method="post">
+{% block title %}Sign Up{% endblock title %}
 
-        {% csrf_token %}
-        {{ form }}
-        <button>Sign Up</button>
-        <p>
-            Already have an existing account? <a href="{% url 'login'%}">Login</a>
-        </p>
-   </form>
-</body>
-</html>
+{% block content %}
+<h1>Sign Up</h1>
+
+<form action="" method="post">
+
+    {% csrf_token %}
+    {{ form }}
+    <button>Sign Up</button>
+    <p>
+        Already have an existing account? <a href="{% url 'login'%}">Login</a>
+    </p>
+</form>
+{% endblock content %}
