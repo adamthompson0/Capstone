@@ -1,17 +1,29 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'weather/navbar.css'%}">
-<nav>
-    <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/7913380/weather-icon-md.png" alt="Weather logo">
-    <ul>
-        <li><a href="{% url 'index' %}">Home</a></li>
-        {% if request.user.is_authenticated %}
-        <li><a href="{% url 'logout'%}">Logout</a></li>
-        <li><a href="#">Profile</a></li>
+<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container">
+        <a href="{% url 'login' %}"></a>
 
-        {% else %}
-        <li><a href="{% url 'login' %}">Login</a></li>
-        <li><a href="{% url 'signup'%}">Sign Up</a></li>
-        {% endif %}
-    </ul>
+    </div>
+</div>
+
+<br /><br /> <br>
+<div id="jumbo" class='jumbo'>
+    <h1 class='display-5'> Weather Wizard</h1>
+    <h5>Using bootstrap framework</h5>
+    <img src="{% static 'weather/pngegg.png' %}" class="logo" alt="Weather logo">
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <form method="post" class="col-md">
+        {% csrf_token %}
+        <div class="input-group">
+
+        <input type="text" class='form-control' name='location' placeholder="Enter your location">
+        <div class="input-group-btn">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+        </div>
+    </form>
 </nav>
-
+<br> <br>

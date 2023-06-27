@@ -1,23 +1,27 @@
 {% extends 'weather/base.html' %}
 
-{% block title %}{% endblock title%}
+{% block title %}Weather Wizard{% endblock title%}
 
 
 {% block content %}
-<h1>Home</h1>
-<form>
-    <label for="location-input">Enter a location:</label>
-    <input type="text" id="location-input" name="location" required>
-    <button type="submit">Get Weather</button>
-    {{weather.location}}
+<div class='row'>
+    <div class='col d-flex justify-content-center'>
+        <div class='card text-white bg-light mb-6'>
+        <div class='card-body'>
+            <h4><span class='badge badge-primary'>Location: </span>{{weather.location}}</h4>
+            <h4><span class='badge badge-primary'>Time Zone: </span>{{weather.time_zone}}</h4>
+            <h4><span class='badge badge-primary'>Temperature: </span>{{weather.temperature}}</h4>
+            <h4><span class='badge badge-primary'>Time:</span>{{weather.date}}</h4>
+            <h4><span class='badge badge-primary'>Description: </span>{{weather.description}}</h4>
+            <h4><span class='badge badge-primary'>Longitiude: </span>{{weather.longitude}}</h4>
+            <h4><span class='badge badge-primary'>Latitude</span>{{weather.latitude}}</h4>
 
-</form>
-<p>Time zone: {{weather.time_zone}}</p>
-<p>Temperature: {{weather.temperature}}</p>
-<p>Time: {{weather.date}}</p>
-<p>Description: {{weather.description}}</p>
-<p>{{weather.icon}}</p>
-<p>Longitude: {{weather.longitude}}</p>
-<p>Latitude: {{weather.latitude}}</p>
+        </div>
+        </div>
+
+    </div>
+
+</div>
+
 
 {% endblock content %}
