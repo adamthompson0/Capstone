@@ -3,9 +3,10 @@ import requests
 from api.keys import api
 # Create your views here.
 def index(request):
-    location = 'Beaverton, OR'
-    url = f'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}/?unitGroup=us&key={api}'
-    response = requests.get(url).json()
+    if request.method == 'POST':
+        location = request.POST['location']
+        url = f'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}/?unitGroup=us&key={api}'
+        response = requests.get(url).json()
 
     weather = {
         'location': location,
