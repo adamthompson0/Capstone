@@ -1,9 +1,34 @@
 {% extends 'weather/base.html' %}
 
-{% block title %}Weather Wizard{% endblock title%}
+{% load static %}
+
+{% block title %}
+
+{% endblock title%}
 
 
 {% block content %}
+
+<div id="jumbo" class='jumbo'>
+    <h1 class='display-5'> Weather Wizard</h1>
+    <h5>Using bootstrap framework</h5>
+    <img src="{% static 'weather/pngegg.png' %}" class="logo"alt="Weather logo">
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <form method="post" class="col-md">
+        {% csrf_token %}
+        <div class="input-group">
+
+        <input type="text" class='form-control' name='location' placeholder="Enter your location">
+        <div class="input-group-btn">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+        </div>
+    </form>
+</nav>
+<br> <br>
+
 <div class='row'>
     <div class='col d-flex justify-content-center'>
         <div class='card text-white bg-light mb-6'>
@@ -11,10 +36,12 @@
             <h4><span class='badge badge-primary'>Location: </span>{{weather.location}}</h4>
             <h4><span class='badge badge-primary'>Time Zone: </span>{{weather.time_zone}}</h4>
             <h4><span class='badge badge-primary'>Temperature: </span>{{weather.temperature}}</h4>
+            <h4><span class='badge badge-primary'>High/Low: </span>{{weather.tempmax}}/{{weather.tempmin}}</h4>
             <h4><span class='badge badge-primary'>Time:</span>{{weather.date}}</h4>
-            <h4><span class='badge badge-primary'>Description: </span>{{weather.description}}</h4>
+            <h4><span class='badge badge-primary'>Description: </span>{{weather.description}} {{weather.icon}}</h4>
             <h4><span class='badge badge-primary'>Longitiude: </span>{{weather.longitude}}</h4>
             <h4><span class='badge badge-primary'>Latitude</span>{{weather.latitude}}</h4>
+            <h4><span class='badge badge-primary'>UV Index</span>{{weather.uvindex}}</h4>
 
         </div>
         </div>
