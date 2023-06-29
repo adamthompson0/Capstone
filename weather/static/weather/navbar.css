@@ -53,6 +53,7 @@ ul{
     margin-right: 20px;
 }
 
+/* https://css-tricks.com/css-link-hover-effects/ */ 
 a {
     overflow: hidden;
     position: relative;
