@@ -1,19 +1,31 @@
 {% extends 'weather/base.html' %}
 
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'weather/styles.css'%}">
+
 {% block title %}
 Log In
 {% endblock title %}
 
 {% block content %}
-<h1>Log in</h1>
-<form action="" method="post">
+<div class="wrapper">
+    <h1>Log in</h1>
+    <form action="" method="post">
+    
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="remember-forgot">
+            <label><input type="checkbox">Remember me</label>
+            <a href="#">Forgot password?</a>
+        </div>
+        <input type="submit" value="Login">
+        <p>
+            First time here? <a href="{% url 'signup' %}">Sign Up</a>
+        </p>
+    
+    </form>
 
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Login">
-    <p>
-        First time here? <a href="{% url 'signup' %}">Sign Up</a>
-    </p>
 
-</form>
+</div>
 {% endblock content %}
