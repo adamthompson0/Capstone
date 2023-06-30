@@ -2,3 +2,36 @@
     text-align: center;
     margin-top: 50px;
 }
+
+
+/* Sign up page */
+.wrapper{
+   width: 224px;
+   padding: -1rem 3rem;
+   margin: 80px auto;
+   border-radius: 10px;
+   text-align: center;
+   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+
+}
+
+.helptext{
+    display: none;
+}
+
+.form.signup-page{
+    font-size: small;
+    padding-top: 2rem;
+    padding-top: 2rem;
+}
+
+label{
+    color: #82caff;
+}
+
+p a{
+    text-decoration: none;
+    display: inline-flex;
+}
+
+

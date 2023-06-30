@@ -1,17 +1,23 @@
 {% extends 'weather/base.html' %}
 
+{% load static %}
+<link rel="stylesheet" href="{% static 'weather/styles.css'%}">
+
 {% block title %}Sign Up{% endblock title %}
 
 {% block content %}
-<h1>Sign Up</h1>
 
-<form action="" method="post">
+<div class="wrapper">
+    <h1>Sign Up</h1>
 
-    {% csrf_token %}
-    {{ form }}
-    <button>Sign Up</button>
-    <p>
-        Already have an existing account? <a href="{% url 'login'%}">Login</a>
-    </p>
-</form>
+    <form action="" method="post" class=signup-page>
+    
+        {% csrf_token %}
+        {{ form }}
+        <button>Sign Up</button>
+        <p>
+            Already have an existing account? <a href="{% url 'login'%}">Login</a>
+        </p>
+    </form>
+</div>
 {% endblock content %}
