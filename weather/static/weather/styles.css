@@ -6,12 +6,15 @@
 
 /* Sign up page */
 .wrapper{
-   width: 224px;
+   width: 241px;
    padding: -1rem 3rem;
    margin: 80px auto;
    border-radius: 10px;
    text-align: center;
-   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+   background-color: rgb(44, 72, 102);
+
+   
 
 }
 
@@ -32,6 +35,11 @@ label{
 p a{
     text-decoration: none;
     display: inline-flex;
+}
+
+/* Log in page */
+.remember-forgot a{
+    text-decoration: none;
 }
 
 
