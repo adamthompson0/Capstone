@@ -20,6 +20,8 @@ def index(request):
             'longitude': response['longitude'],
             'latitude': response['latitude'],
             'uvindex': response['currentConditions']['uvindex'],
+            'sunset': response['currentConditions']['sunset'],
+            'sunrise': response['currentConditions']['sunrise']
 
         }
 
