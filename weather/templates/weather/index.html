@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title %}
-
+Weather Wizard
 {% endblock title%}
 
 
@@ -42,6 +42,9 @@
             <h4><span class='badge badge-primary'>Longitiude: </span>{{weather.longitude}}</h4>
             <h4><span class='badge badge-primary'>Latitude</span>{{weather.latitude}}</h4>
             <h4><span class='badge badge-primary'>UV Index</span>{{weather.uvindex}}</h4>
+            <h4><span class='badge badge-primary'>Sunrise</span>{{weather.sunrise}} AM</h4>
+            <h4><span class='badge badge-primary'>Sunset</span>{{weather.sunset}} PM</h4>
+
 
         </div>
         </div>

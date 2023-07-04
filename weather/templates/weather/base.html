@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% block title %}{% endblock title %}
+    <title>
+        {% block title %}{% endblock title %}
+    </title>
     <link rel="stylesheet" href="{% static 'weather/styles.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.0/darkly/bootstrap.min.css" integrity="sha512-3xynESL0QF3ERUl9se1VJk043nWT+UzWJveifBw7kLtC226vyGINZFtmyK015F83KBSNW+67alYSY2cCj1LHOQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.0/quartz/bootstrap.min.css" integrity="sha512-Wwa32vy+l32AJgZBv6XABgPyi254CmzXkvyZh+EaQWCyaoLOP4BIG00Oz8TbiRutO8VMi9VHJuy7AbFqDkF9Hw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <script defer src="{% static 'weather/main.js'%}"></script>
     <link rel="stylesheet" href="{% static 'weather/navbar.css' %}">
+</head>
 <body>
     {% include 'weather/_navbar.html' %}
 

@@ -43,3 +43,14 @@ p a{
 }
 
 
+/* Search bar */
+.bg-dark{
+    background-color:rgb(44, 72, 102) !important ;
+}
+
+/* homepage */
+body{
+    background-color: rgb(44, 72, 102) ;
+}
+
+
