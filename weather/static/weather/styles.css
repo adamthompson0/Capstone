@@ -53,4 +53,9 @@ body{
     background-color: rgb(44, 72, 102) ;
 }
 
+/* detail */
+.location-detail{
+    padding-top: 6rem;
+    margin: auto;
+}
 

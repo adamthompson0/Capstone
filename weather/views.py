@@ -28,6 +28,6 @@ def index(request):
         context = {
             'weather': weather
         }
-        return render(request,'weather/index.html', context)
+        return render(request,'weather/detail.html', context)
     else:
         return render(request,'weather/index.html')
