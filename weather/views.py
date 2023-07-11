@@ -30,4 +30,4 @@ def index(request):
         }
         return render(request,'weather/detail.html', context)
     else:
-        return render(request,'weather/index.html')
+        return render(request,'weather/home.html')
