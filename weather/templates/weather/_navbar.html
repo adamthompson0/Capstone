@@ -4,7 +4,7 @@
     <div class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
         <div class="container">
             <ul>
-                <li><a data-replace='Home' class='home' href="{% url 'index' %}">Home</a></li>
+                <li><a data-replace='Home' class='home' href="{% url 'home' %}">Home</a></li>
                 {% if request.user.is_authenticated %}
                 <li><a data-replace='logout' class='logout' href="{% url 'logout' %}">Logout</a></li>
         
