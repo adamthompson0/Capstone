@@ -110,3 +110,12 @@ padding-right: 2rem;
 }
 
 
+/* compare page */
+.compare-title{
+    padding:4rem;
+    justify-content: center;
+}
+
+.location1{
+    padding: 2rem;
+}

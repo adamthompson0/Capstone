@@ -11,6 +11,11 @@
     
 }
 
+.compare{
+  justify-content: right;
+  text-decoration: none;
+}
+
 
 .signup{
     justify-content: right;
