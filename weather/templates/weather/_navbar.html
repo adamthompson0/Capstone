@@ -6,8 +6,8 @@
             <ul>
                 <li><a data-replace='Home' class='home' href="{% url 'home' %}">Home</a></li>
                 {% if request.user.is_authenticated %}
-                <li><a data-replace='logout' class='logout' href="{% url 'logout' %}">Logout</a></li>
-        
+                <li><a data-replace='Logout' class='logout' href="{% url 'logout' %}">Logout</a></li>
+                <li><a data-replace='Compare' class='compare' href="{% url 'compare' %}">Compare</a></li>
                 
                 {% else %}
                 <li><a data-replace='Login' class='login' href="{% url 'login' %}">Login</a></li>

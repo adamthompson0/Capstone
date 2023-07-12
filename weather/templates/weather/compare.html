@@ -1,0 +1,58 @@
+{% extends 'weather/base.html' %}
+
+{% block title %}Compare{% endblock title %}
+
+{% block content %}
+<h1 class='compare-title'>Compare</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <form method="post" class="col-md">
+        {% csrf_token %}
+        <div class="input-group">
+
+        <input type="text" class='form-control' name='location1' placeholder="Enter your location">
+        <input type="text" class='form-control' name='location2' placeholder="Enter your location">
+        <div class="input-group-btn">
+            <button type="submit" class="btn btn-primary">Compare</button>
+        </div>
+        </div>
+    </form>
+</nav>
+
+<div class='row'> 
+    <div class='col d-flex justify-content-center'>
+        <div class='card text-white bg-light col-sm-6 mb-2 mb-sm-0"> location1'>
+        <div class='card-body foot' >
+            <h4><span class='badge badge-primary'></span>{{weather.location1}}</h4>
+            <h4><span class='badge badge-primary'>Temperature: </span>{{weather.temperature1}}</h4>
+            <h4><span class='badge badge-primary'>High/Low: </span>{{weather.tempmax1}}/{{weather.tempmin1}}</h4>
+            <h4><span class='badge badge-primary'>Description: </span>{{weather.description1}} {{weather.icon1}}</h4>
+            <h4><span class='badge badge-primary'>UV Index: </span>{{weather.uvindex1}}</h4>
+            <h4><span class='badge badge-primary'>Sunrise: </span>{{weather.sunrise1}} AM</h4>
+            <h4><span class='badge badge-primary'>Sunset: </span>{{weather.sunset1}} PM</h4>
+            <h4><span id='weatherCode' class='badge badge-primary'>icon: </span>{{weather.icon1}}</h4>
+
+            
+        </div>
+    </div>
+    
+</div>
+<div class='row'> 
+    <div class='col d-flex justify-content-center'>
+        <div class='card text-white bg-light col-sm-6 mb-2 mb-sm-0">'>
+        <div class='card-body foot' >
+            <h4><span class='badge badge-primary'></span>{{weather.location2}}</h4>
+            <h4><span class='badge badge-primary'>Temperature: </span>{{weather.temperature2}}</h4>
+            <h4><span class='badge badge-primary'>High/Low: </span>{{weather.tempmax2}}/{{weather.tempmin2}}</h4>
+            <h4><span class='badge badge-primary'>Description: </span>{{weather.description2}} {{weather.icon2}}</h4>
+            <h4><span class='badge badge-primary'>UV Index: </span>{{weather.uvindex2}}</h4>
+            <h4><span class='badge badge-primary'>Sunrise: </span>{{weather.sunrise2}} AM</h4>
+            <h4><span class='badge badge-primary'>Sunset: </span>{{weather.sunset2}} PM</h4>
+            <h4><span id='weatherCode' class='badge badge-primary'>icon: </span>{{weather.icon2}}</h4>
+
+            
+        </div>
+    </div>
+    
+</div>
+<br> <br>
+{% endblock content %}
