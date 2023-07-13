@@ -45,8 +45,8 @@ def compare(request):
         weather = {
             'location1': location1,
             'location2': location2,
-            'time_zone1': response1['timezone'],
-            'time_zone2': response2['timezone'],
+            'timezone1': response1['timezone'],
+            'timezone2': response2['timezone'],
             'date1': response1['currentConditions']['datetime'],
             'date2': response2['currentConditions']['datetime'],
             'temperature1': response1['currentConditions']['temp'],
