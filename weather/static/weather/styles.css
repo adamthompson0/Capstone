@@ -148,3 +148,27 @@ padding-right: 2rem;
 
 }
 
+/* dark mode toggle */
+body {
+    
+    background-color: white;
+    color: black;
+    
+  }
+  
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+
+.toggleBtn{
+    width: 53px;
+    display: block;
+    margin-top: 15px;
+    justify-content: right;
+    border-radius: 13px;
+
+}
+  
+  
+
