@@ -1,119 +1,81 @@
-# Capstone
-Weather website allows user to see current and future weather for any location in the world.
+# Skyview
+Weather website allows user to see current weather in the world and also allows user to compare two different locations.
 
 ## Project Overview
 What are the major features of your web application? What problem is it attempting to solve? What libraries or frameworks will you use?
 
 Major features:
-- allows user to look up weather anywhere in world
-- tells them the future forecast
+- Allows user to look up weather anywhere in world
+- Allows them to compare two location's
 - Sunset and sunrise
 - High and low temps of day
-- allow user to set local city and other cities
-- let user set measurements of their choice(temp, wind speeds)
+- Allows user to have os set theme or set dark mode of their choice
 
 Libraries/Frameworks will include are:
-- Axios
-- Vue
+- Bootstrap
+- Bootswatch(library)
+- Font Awesome
 
-The problem I will solve will allow users to find out the weather anywhere in the world. Allow them to save their local city and other cities.
 
+## Pages:
 
-## Features
-Walk through the application from the user's perspective. Think about features in terms of user stories.
-
-### User Story
-As a user, I want a registration page because I can save my info of what places I have looked up.
-
-### Tasks:
+### User Registration:
 - Sign up page allows user to make an account if they're new to the website.
 - Sign in page allowing user who has an existing account to sign in and view their data.
 - Log out page allowing user to make a new account or allow someone else to sign in from same local machine.
 
-## User stories
+### Compare Page:
+- Allow user to have two seperate searches for two different locations anywhere in the world
 
-As a user, I want user registration to allow me to save cities and my local city.
+### Detail Page:
+- Allow user to look up in home page a location of their choice and it will take them to a detail page with more in depth info of the location.
 
-As a user, I want to be able to have the choice of changing the measurements of my choice depending on where I live.
-
-As a user, I want to know the weekly forecast so I can prepare for a trip or for a day out accordingly
-
-As a user, I want to know the high and low temperature of the day so I can expect hotter or colder weather.
-
-User stories are high-level descriptions of features for your application from a user's standpoint.
-
-## Tasks:
-
-Store user saved cities and allow them to scroll through each
-Display weekly forecasts for each location in the world
-Put current time at location
-Display sunrise and sunset according to location
-Allow user to change measurements of their choosing
-
-
-Questions to ask yourself about functionalities
-What will the user see on each page? What can they input and click and see? How will their actions correspond to events on the back-end?
-User page: Will show every location they saved with the current temp
-Home page: Search bar allowing user to look up cities in the world and allows them to click save button and save it to their profile
-
-Actions by the user will lead the buttons in the back end getting the click events will trigger functions to save the info to their profile and changing their measurements
-
-## Data Model
-User:
-    - id (number field)
-    - Email
-
-Date: 
-  - DateTimeZoneField
-
-Location
-
-Weather Data
-
-Weather Provider
-
-Weather Update
-
-
-
-
-
-## Schedule
-
-### 1st week
-- Start django project
-- Start creating apps
-- Create models for database
-- Finish django implementation by end of week
-
-### 2nd week
-- Get weather api 
-- Use axios and create functions
-- Create click events that allow users to interact with website
+## API:
+https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}/?unitGroup=us&key={api}'
   
-### 3rd week
-- Create html files
-- Start creating elements and giving them element tags
-- Use vue to manipulate page and put elements on page
-- Start to style page
 
-### 4th week
-- put finishing touches on website
-- Finish styling
-- Add any nice to haves and great to haves
-- After finishing capstone work on presentation language, any other projects I would like to show off.
+#### Get single location: https://localhost:8000/home
+```json
+"currentConditions": {
+  "datetime": "19:59:00",
+  "datetimeEpoch": 1689303540,
+  "temp": 80.1,
+  "feelslike": 80.2,
+  "humidity": 42.5,
+  "dew": 55.3,
+  "precip": 0,
+  "precipprob": 0,
+  "snow": 0,
+  "snowdepth": 0,
+  "preciptype": null,
+  "windgust": null,
+  "windspeed": 7,
+  "winddir": 339,
+  "pressure": 1017.4,
+  "visibility": 9.9,
+  "cloudcover": 0,
+  "solarradiation": 83,
+  "solarenergy": 0.3,
+  "uvindex": 1,
+  "conditions": "Clear",
+  "icon": "clear-day",
+  "stations": [
+   "KHIO",
+   "F7314",
+   "KVUO"
+  ],
+  "source": "obs",
+  "sunrise": "05:35:17",
+  "sunriseEpoch": 1689251717,
+  "sunset": "20:58:16",
+  "sunsetEpoch": 1689307096,}
 
-### MVP
-Essentials:
-- Store user saved cities and allow them to scroll through each
-- Display weekly forecasts for each location in the world
-- Current time in that location
-- Mesaurements of user pref
 
-Nice to haves:
-- add a background depending on time of day in said location
-- add extra info of weather like air quality etc.
 
-Great to haves: 
-- Email verification
-- (need to think of more great to haves but will add more when thought of)
+
+
+
+
+
+
+
